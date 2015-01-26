@@ -12,11 +12,11 @@ es:
         state: Provincia ó Estado
         zipcode: Código Postal
       spree/calculator/tiered_flat_rate:
-        preferred_base_amount:
-        preferred_tiers:
+        preferred_base_amount: Cantidad base preferida
+        preferred_tiers: Niveles preferidos
       spree/calculator/tiered_percent:
-        preferred_base_percent:
-        preferred_tiers:
+        preferred_base_percent: Porcentaje base preferido
+        preferred_tiers: Niveles preferidos
       spree/country:
         iso: ISO
         iso3: ISO3
@@ -24,7 +24,7 @@ es:
         name: Nombre
         numcode: Código ISO
       spree/credit_card:
-        base:
+        base: Banco base
         cc_type: Tipo
         month: Mes
         name: Nombre
@@ -109,20 +109,20 @@ es:
         abbr: Abreviatura
         name: Nombre
       spree/state_change:
-        state_changes:
-        state_from:
-        state_to:
-        timestamp:
-        type:
-        updated:
-        user:
+        state_changes: Cambios de estado
+        state_from: Desde estado
+        state_to: Hasta estado
+        timestamp: Fecha/Hora
+        type: Tipo
+        updated: Actualizado
+        user: Usuario
       spree/store:
-        mail_from_address:
-        meta_description:
-        meta_keywords:
-        name:
-        seo_title:
-        url:
+        mail_from_address: Dirección de correo
+        meta_description: Meta description
+        meta_keywords: Meta palabras clave
+        name: Nombre
+        seo_title: Título SEO
+        url: url
       spree/tax_category:
         description: Descripción
         name: Nombre
@@ -157,47 +157,47 @@ es:
         spree/calculator/tiered_flat_rate:
           attributes:
             base:
-              keys_should_be_positive_number:
+              keys_should_be_positive_number: Llaves deben ser números positivos
             preferred_tiers:
-              should_be_hash:
+              should_be_hash: Debe de ser Hash
         spree/calculator/tiered_percent:
           attributes:
             base:
-              keys_should_be_positive_number:
-              values_should_be_percent:
+              keys_should_be_positive_number: Llaves deben ser números positivos
+              values_should_be_percent: Valores deben de ser porcentajes
             preferred_tiers:
-              should_be_hash:
+              should_be_hash: Debe de ser Hash
         spree/classification:
           attributes:
             taxon_id:
-              already_linked:
+              already_linked: Ya está ligado
         spree/credit_card:
           attributes:
             base:
               card_expired: La Tarjeta ha expirado
-              expiry_invalid:
+              expiry_invalid: La expiración es inválida
         spree/line_item:
           attributes:
             currency:
-              must_match_order_currency:
+              must_match_order_currency: Debe de ser del mismo tipo de moneda que el pedido
         spree/refund:
           attributes:
             amount:
-              greater_than_allowed:
+              greater_than_allowed: Es más grande que lo permitido
         spree/reimbursement:
           attributes:
             base:
-              return_items_order_id_does_not_match:
+              return_items_order_id_does_not_match: No coincide el idendificador del pedido de los productos que se están devolviendo
         spree/return_item:
           attributes:
             inventory_unit:
-              other_completed_return_item_exists:
+              other_completed_return_item_exists: Otra devolución ya completa existe
             reimbursement:
-              cannot_be_associated_unless_accepted:
+              cannot_be_associated_unless_accepted: No se puede asociar a menos que este aceptada
         spree/store:
           attributes:
             base:
-              cannot_destroy_default_store:
+              cannot_destroy_default_store: La tienda por defecto no puede ser destruida
     models:
       spree/address:
         one: Dirección.
@@ -209,6 +209,8 @@ es:
         one: Tarjeta de Crédito.
         other: Tarjetas de Crédito
       spree/customer_return:
+        one: Devolución
+        other: Devoluciones
       spree/inventory_unit:
         one: Unidad de inventario.
         other: Unidades de inventario
@@ -216,7 +218,11 @@ es:
         one: Línea de pedido
         other: Líneas de pedido
       spree/option_type:
+        one: Tipo de opción
+        other: Tipos de opciones
       spree/option_value:
+        one: Valor de opción
+        other: Valor de opciones
       spree/order:
         one: Pedido
         other: Pedidos
@@ -224,6 +230,8 @@ es:
         one: Pago
         other: Pagos
       spree/payment_method:
+        one: Método de pago
+        other: Métodos de Pagos
       spree/product:
         one: Producto
         other: Productos
@@ -231,6 +239,8 @@ es:
         one: Promoción
         other: Promociones
       spree/promotion_category:
+        one: Categoria de promoción
+        other: Categorias de promociones
       spree/property:
         one: Propiedad
         other: Propiedades
@@ -238,12 +248,20 @@ es:
         one: Prototipo
         other: Propotipos
       spree/refund_reason:
+        one: Razón de reembolso
+        other: Razones de reembolsos
       spree/reimbursement:
+        one: Reembolso
+        other: Reembolsos
       spree/reimbursement_type:
+        one: Tipo de reembolsos
+        other: Tipos de reembolsos
       spree/return_authorization:
         one: Autorización para devolución
         other: Autorizaciones para devolución
       spree/return_authorization_reason:
+        one: Razón de autorización para devolución
+        other: Razones de autorización para devolución
       spree/role:
         one: Función
         other: Funciones
@@ -254,13 +272,26 @@ es:
         one: Categoría de envío
         other: Categorías de envío
       spree/shipping_method:
+        one: Método de envío
+        other: Métodos de envío
       spree/state:
         one: Provincia
         other: Provincias
       spree/state_change:
-      spree/stock_location:
+        one: Provincia
+        other: Provincias
+      spree/stock_location: 
+        one: Local de Inventario
+        other: Locales de Inventario
       spree/stock_movement:
-      spree/stock_transfer:
+        one: Movimiento de Inventario
+        other: Movimientos de Inventario
+      spree/stock_transfer: 
+        one: Transferencia de Inventario
+        other: Transferencias de Inventario
+      spree/store:
+        one: Tienda
+        other: Tiendas  
       spree/tax_category:
         one: Categoría fiscal
         other: Categorías fiscales
@@ -274,6 +305,8 @@ es:
         one: Categoría
         other: Categorías
       spree/tracker:
+        one: Código de rastreo
+        other: Códigos de rastreo
       spree/user:
         one: Usuario
         other: Usuarios
@@ -331,10 +364,10 @@ es:
         other: "%{count} errores evitaron que este %{resource} fuese grabado:"
   spree:
     abbreviation: Abreviatura
-    accept:
-    acceptance_errors:
-    acceptance_status:
-    accepted:
+    accept: Aceptar
+    acceptance_errors: Errores de aceptación
+    acceptance_status: Estado de aceptación
+    accepted: Aceptado
     account: Cuenta
     account_updated: Cuenta actualizada
     action: Acción
@@ -347,7 +380,7 @@ es:
       list: Listar
       listing: Listando
       new: Nuevo
-      refund:
+      refund: Reembolso
       save: Guardar
       update: Actualizar
     activate: Activar
@@ -355,7 +388,7 @@ es:
     add: Añadir
     add_action_of_type: Añadir acción del tipo
     add_country: Añadir País
-    add_coupon_code:
+    add_coupon_code: Añadir código de cupón
     add_new_header: Añadir nueva cabecera
     add_new_style: Añadir nuevo estilo
     add_one: Añadir uno
@@ -371,7 +404,7 @@ es:
     additional_item: Coste de artículo adicional
     address1: Dirección
     address2: Dirección (cont.)
-    adjustable:
+    adjustable: Ajustable
     adjustment: Ajuste
     adjustment_amount: Cuantía
     adjustment_successfully_closed: El ajuste ha sido cerrado satisfactoriamente
@@ -381,28 +414,28 @@ es:
     admin:
       tab:
         configuration: Configuración
-        option_types:
+        option_types: Tipos de opciones
         orders: Pedidos
         overview: Visión general
         products: Productos
         promotions: Promociones
-        properties:
-        prototypes:
+        properties: Propiedades
+        prototypes: Prototipos
         reports: Informes
-        taxonomies:
-        taxons:
+        taxonomies: Taxonomías
+        taxons: Taxones
         users: Usuarios
       user:
-        account:
-        addresses:
-        items:
-        items_purchased:
-        order_history:
-        order_num:
-        orders:
-        user_information:
+        account: Cuenta
+        addresses: Dirección
+        items: Artículos
+        items_purchased: Artículos comprados
+        order_history: Historial de pedidos
+        order_num: Número de pedido
+        orders: Pedido
+        user_information: Información de usuario
     administration: Administración
-    advertise:
+    advertise: Anuncio
     agree_to_privacy_policy: De acuerdo con la politica de privacidad.
     agree_to_terms_of_service: De acuerdo con las condiciones de uso
     all: Todos
@@ -432,36 +465,36 @@ es:
     are_you_sure_delete: "¿Estás seguro de que quieres borrar este registro?"
     associated_adjustment_closed: El ajuste asociado está cerrado y no será recalculado. ¿Quieres abrirlo?
     authorization_failure: Fallo en la autorización
-    authorized:
-    auto_capture:
+    authorized: Autorizado
+    auto_capture: Auto captura
     available_on: Disponible
-    average_order_value:
-    avs_response:
+    average_order_value: Valor promedio de pedido
+    avs_response: Tiempo de respuesta promedio
     back: Volver
     back_end: Parte interna
-    back_to_payment:
-    back_to_resource_list:
-    back_to_rma_reason_list:
+    back_to_payment: Volver a pago
+    back_to_resource_list: Volver a lista de recursos
+    back_to_rma_reason_list: Volver a lista de razones de devolución
     back_to_store: Volver a la Tienda
     back_to_users_list: Volver a Listado de Usuarios
-    backorderable: Devuelto
-    backorderable_default:
-    backordered:
-    backorders_allowed: Permitida la Devolucion
+    backorderable: Disponible para pedido pendiente
+    backorderable_default: Disponible para pedido pendiente por defecto
+    backordered: Pedido pendiente
+    backorders_allowed: Permitida los pedidos pendientes
     balance_due: Saldo adeudado
-    base_amount:
-    base_percent:
+    base_amount: Cantidad base
+    base_percent: Porcentaje base
     bill_address: Dirección de facturación
     billing: Facturación
     billing_address: Dirección de facturación
     both: Ambos
-    calculated_reimbursements:
+    calculated_reimbursements: Reembolsos calculados
     calculator: Calculador
     calculator_settings_warning: Si cambias el tipo de calculador, debes guardar primero antes de editar las preferencias del calculador
     cancel: Cancelar
-    canceled_at:
-    canceler:
-    cannot_create_customer_returns:
+    canceled_at: Cancelado en
+    canceler: Cancelador
+    cannot_create_customer_returns: no se puede crear devoluciones de los clientes
     cannot_create_payment_without_payment_methods: No puedes crear un pago para un pedido sin antes definir un método de pago
     cannot_create_returns: No puedes crear devoluciones para un pedido que no tiene unidades enviadas
     cannot_perform_operation: No se pudo realizar la operación solicitada
@@ -470,25 +503,25 @@ es:
     capture_events:
     card_code: Código de tarjeta
     card_number: Número de tarjeta
-    card_type:
+    card_type: Tipo de tarjeta
     card_type_is: Tipo de tarjeta es
     cart: Carrito
-    cart_subtotal:
+    cart_subtotal: Subtotal del carrito
     categories: Categorías
     category: Categoría
-    charged:
+    charged: Cargado
     check_for_spree_alerts: Comprobar alertas de Spre
     checkout: Realizar pedido
     choose_a_customer: Escoge un cliente
     choose_a_taxon_to_sort_products_for:
     choose_currency: Escoge moneda
     choose_dashboard_locale: Escoge idioma del Panel de Instrumentos
-    choose_location:
+    choose_location: Seleccionar ubicación
     city: Ciudad
-    clear_cache:
-    clear_cache_ok:
-    clear_cache_warning:
-    click_and_drag_on_the_products_to_sort_them:
+    clear_cache: Limpiar Cache
+    clear_cache_ok: Limpiar Cache OK
+    clear_cache_warning: Advertencia al Limpiar Cache
+    click_and_drag_on_the_products_to_sort_them: haga clic y arrastre en los productos para ordenarlos
     clone: Clonar
     close: Cerrar
     close_all_adjustments: Cerrar todos los ajustes
@@ -505,7 +538,7 @@ es:
     cost_currency: Moneda de costo
     cost_price: Precio de costo
     could_not_connect_to_jirafe: No se pudo conectar a Jirafe para sincronizar los datos. Se intentará más tarde automáticamente.
-    could_not_create_customer_return:
+    could_not_create_customer_return: No se pudo crear devolución del cliente
     could_not_create_stock_movement: Hubo un problema grabando este movimiento de stock. Por favor inténtalo otra vez.
     count_on_hand: Disponible
     countries: Países
@@ -513,10 +546,10 @@ es:
     country_based: País base
     country_name: Nombre
     country_names:
-      CA:
-      FRA:
-      ITA:
-      US:
+      CA: Canada
+      FRA: Francia
+      ITA: Italia
+      US: EUA
     coupon: Cupón
     coupon_code: Código Cupón
     coupon_code_already_applied: El código del cupón ya ha sido aplicado a este pedido
@@ -526,17 +559,17 @@ es:
     coupon_code_max_usage: Excedido el limite de uso del código del cupón
     coupon_code_not_eligible: Este código de cupón no es elegible para este pedido
     coupon_code_not_found: El código del cupón que has introducido no existe. Inténtalo de nuevo.
-    coupon_code_unknown_error:
+    coupon_code_unknown_error: Error desconocido en código de cupón
     create: Crear
     create_a_new_account: Crear una nueva cuenta
-    create_new_order:
-    create_reimbursement:
+    create_new_order: Crear nuevo pedido
+    create_reimbursement: Crear nuevo reembolso
     created_at: Creada
     credit: Crédito
     credit_card: Tarjeta de Crédito
     credit_cards: Tarjetas de Crédito
     credit_owed: Crédito adeudado
-    credits:
+    credits: Créditos
     currency: Moneda
     currency_decimal_mark: Marca decimal de moneda
     currency_settings: Parámetros de moneda
@@ -547,11 +580,11 @@ es:
     customer: Cliente
     customer_details: Detalles del Cliente
     customer_details_updated: Detalles del Cliente actualizado
-    customer_return:
-    customer_returns:
+    customer_return: Devolución del cliente
+    customer_returns: Devolucioness del cliente
     customer_search: Búsqueda del Cliente
     cut: Cortar
-    cvv_response:
+    cvv_response: Respuesta CVV
     dash:
       jirafe:
         app_id: ID App
@@ -580,19 +613,19 @@ es:
     description: Descripción
     destination: Destino
     destroy: Eliminar
-    details:
+    details: Detalles
     discount_amount: Cuantía descuento
     dismiss_banner: No. Gracias! No estoy interesado, no mostrar este mensaje otra vez
     display: Mostrar
     display_currency: Moneda a mostrar
-    doesnt_track_inventory:
+    doesnt_track_inventory: No realizar seguimiento de inventario
     edit: Editar
-    editing_resource:
-    editing_rma_reason:
+    editing_resource: Editar recurso
+    editing_rma_reason: Editar razón de autorización de devolución de la mercancía
     editing_user: Editando Usuario
     eligibility_errors:
       messages:
-        has_excluded_product:
+        has_excluded_product: Ha excluido el producto
         item_total_less_than:
         item_total_less_than_or_equal:
         item_total_more_than:
